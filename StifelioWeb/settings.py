@@ -28,7 +28,8 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'clau-de-desenvolupament-insegura-pe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['stifelioweb.onrender.com']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', []).split(',')
+
 
 
 # Application definition
