@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+    <p> pagina 2! </p>
+
+    <ul>
+        {% for brand in dades.results %}
+            <li>{{brand.name}}</li>
+        {% endfor %}
+
+    </ul>
+    <a href="{% url 'home' %}" target=_self title="Tornar a la pàgina 1">
+                (<--Pàgina 1)
+            </a>
+
+{% endblock %}

@@ -1,0 +1,113 @@
+{%  load static %}
+
+<!doctype html>
+<html lang="ca">
+
+<head>
+    <title> Calçats Stifelio </title>
+</head>
+
+<body>
+
+    <!--Cos de la pàgina principal-->
+    <h1 style="background-color: red">Pàgina oficial de Stifelio</h1>
+
+
+    <div class="Informació sessió d'usuari">
+            <div style="border: 10px solid cadetblue; border-radius: 10px; padding: 10px;">
+                dnsnñfndñofnsonsaonfso
+            </div>
+
+        {% if request.user.is_authenticated %}
+            <div style="border: 1px solid black; padding: 10px; width: fit-content;">
+                Usuari connectat: <strong>{{ request.user.username }}</strong>
+            </div>
+        {% else %}
+            <p>No estàs connectat.</p>
+        {% endif %}
+    </div>
+
+    <div class = signIn>
+        <a href="{% url 'login' %}" target=_self>
+            Login
+        </a>
+    </div>
+
+    <div class = signUp>
+        <a href="{% url 'register' %}" target=_self>
+            Register
+        </a>
+    </div>
+    <div class="parragraph">
+    <p>
+        <br>
+        Aquesta és la pàgina de <i>Stifelio</i>
+
+        <br> <br>
+        <img src="{% static 'ImatgesWeb/gat.png' %}" alt="Foto que no va"/>
+    </p>
+    </div>
+
+     <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo" >Logo </a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="{% static 'ImatgesWeb/images/menu.png' %}" class="menu-icona" alt=""/>
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="#" > Inici </a> </li>
+                    <li> <a href="#" > Serveis </a> </li>
+                    <li> <a href="#" > Sabates </a> </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section class="sabatilles">
+        <!-- <img src="{% static 'ImatgesWeb/images/coffee-2.jpg' %}" width="300"/>  -->
+
+    </section>
+
+    <main class="Tipus sabates">
+
+        <div class="sabates-content container">
+            <h2> CALÇAT </h2>
+
+            <div class="sabates-group">
+
+                <div class="calçat1">
+                    <h4> Sabatilles </h4>
+                </div>
+
+                <div class="calçat1">
+                    <h4> Esperdenyes </h4>
+                </div>
+
+                <div class="calçat1">
+                    <h4> Botes </h4>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+    <div class ="paginació">
+    {% block content %} <p> pagina 1! </p>
+            <a href="{% url 'page2' %}" target=_self title="Anar a la pàgina 2">
+                (Pàgina 2-->)
+            </a>
+    </div>
+
+
+    {% endblock %}
+
+
+</body>
+
+</html>
