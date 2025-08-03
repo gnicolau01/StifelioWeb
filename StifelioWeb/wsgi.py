@@ -1,5 +1,5 @@
 """
-WSGI config for DjangoProject1 project.
+WSGI config for StifelioWeb project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

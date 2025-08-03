@@ -1,5 +1,5 @@
 """
-ASGI config for DjangoProject1 project.
+ASGI config for StifelioWeb project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
