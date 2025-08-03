@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DjangoProves.iml" filepath="$PROJECT_DIR$/.idea/DjangoProves.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/StifelioWeb.iml" filepath="$PROJECT_DIR$/.idea/StifelioWeb.iml" />
     </modules>
   </component>
 </project>
